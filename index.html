@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Éducative Complète</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Application Éducative Complète</h1>
+  <p>Choisis ton niveau et commence à apprendre !</p>
+</header>
+
+<section id="levelSelection">
+  <h2>Quel est ton niveau ?</h2>
+  <button onclick="selectLevel('6e')">6e</button>
+  <button onclick="selectLevel('3e')">3e</button>
+  <button onclick="selectLevel('Seconde')">Seconde</button>
+  <button onclick="selectLevel('Terminale')">Terminale</button>
+</section>
+
+<section id="mainContent" class="hidden">
+  <nav>
+    <button onclick="selectSubject('maths')">Maths</button>
+    <button onclick="selectSubject('francais')">Français</button>
+    <button onclick="selectSubject('histoire')">Histoire</button>
+    <button onclick="selectSubject('geographie')">Géographie</button>
+    <button onclick="selectSubject('sciences')">Sciences</button>
+  </nav>
+
+  <div id="subjectContent">
+    <h2 id="subjectTitle"></h2>
+    <div id="tabs">
+      <button onclick="showTab('quiz')">Quiz</button>
+      <button onclick="showTab('exercise')">Exercices</button>
+      <button onclick="showTab('videos')">Vidéos</button>
+      <button onclick="showTab('bonus')">Défis</button>
+    </div>
+    <div id="tabContent"></div>
+  </div>
+</section>
+
+<section id="progress">
+  <h2>Progrès</h2>
+  <div id="progressBar"><div id="progressFill"></div></div>
+  <p id="scoreText">Score : 0 / 0</p>
+</section>
+
+<footer>
+  <p>© 2025 Application Éducative Complète</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
